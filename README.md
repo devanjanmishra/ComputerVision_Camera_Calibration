@@ -1,4 +1,4 @@
-# Camera_Calibration using ComputerVision
+# Camera Calibration using ComputerVision & Chessboard Images
 Calculate Camera intrinsic parameter including intrinsic and distortion matrix using Chessboard Images
 
 ## Prepare a Chessboard Image:  
