@@ -3,8 +3,6 @@ import numpy as np
 import cv2
 import pickle
 
-
-
 ################ FIND CHESSBOARD CORNERS - OBJECT POINTS AND IMAGE POINTS #############################
 
 chessboardSize = (8,5)
@@ -32,7 +30,7 @@ images = os.listdir(parent_dir)
 for image in images:
     # img= cv.imread("new_chessboard_images/WIN_20240607_11_39_48_Pro.jpg")
     # img= cv.imread("C:\camera_computer_vision\corrected_chessboard_images\IMG20240601210906_2.jpg")
-    img = cv2.imread(parent_dir+image)
+    img = cv2.imread(os.path.join(parent_dir,image))
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     frameSize = gray.shape
     # n1=cv.imwrite("chessboard_images/check12.jpg",gray)
@@ -40,8 +38,7 @@ for image in images:
     ret, corners = cv2.findChessboardCorners(gray, chessboardSize,None,)
     print(f"{image}: {ret}: Framesize: {frameSize}")
     # If found, add object points, image points (after refining them)
-    if ret == True:
-
+    if ret is True:
         objpoints.append(objp)
         corners2 = cv2.cornerSubPix(gray, corners, (11,11), (-1,-1), criteria)
         imgpoints.append(corners)
@@ -51,12 +48,8 @@ for image in images:
         if os.path.exists("drawn_chessboard/") is False:
             os.makedirs("drawn_chessboard/")
         # cv2.imshow(f'{image}', img)  #to showcase the drawn chessboard
-        cv2.imwrite(f'drawn_chessboard/{image}', img)
+        cv2.imwrite(os.path.join("drawn_chessboard", image), img)
         cv2.waitKey(1000)
-
-
-cv2.destroyAllWindows()
-
 
 ############## CALIBRATION #######################################################
 
@@ -66,7 +59,7 @@ ret, cameraMatrix, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints
 if os.path.exists("Camera_Calibration_output/") is False:
     os.makedirs("Camera_Calibration_output/")
 # Save the camera calibration result for later use (we won't worry about rvecs / tvecs)
-pickle.dump((cameraMatrix, dist), open( "Camera_Calibration_output/calibration.pkl", "wb" ))
-pickle.dump(cameraMatrix, open( "Camera_Calibration_output/cameraMatrix.pkl", "wb" ))
-pickle.dump(dist, open( "Camera_Calibration_output/dist.pkl", "wb" ))
+pickle.dump((cameraMatrix, dist), open(os.path.join("Camera_Calibration_output","calibration.pkl"), "wb"))
+pickle.dump(cameraMatrix, open(os.path.join("Camera_Calibration_output","cameraMatrix.pkl"), "wb"))
+pickle.dump(dist, open(os.path.join("Camera_Calibration_output","dist.pkl"), "wb"))
 
