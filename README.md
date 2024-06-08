@@ -36,7 +36,8 @@ size_of_chessboard_squares_mm = 13
 objp = objp * size_of_chessboard_squares_mm
 ```
 3) objp are all the internal vertices along chessboard distanced at the same distance on paper as in real world, representing the co-ordinates(x,y,z) in real world.  
-![image](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/assets/50066136/8f884df5-211f-492e-bd8c-0a3e6af085ec)
+![image](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/assets/50066136/5a629989-7a85-4e1b-8c08-0abf7d96fb6a)
+
 
 
 
