@@ -7,7 +7,8 @@ Calculate Camera intrinsic parameter including intrinsic and distortion matrix u
 3) Print the chessboard pattern on paper and capture images of it using your camera from different angles. Sample images are stored in [chessboard_image](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/tree/main/chessboard_images) folder.  
 
 
-## Calibration Important Parameters
-
+## Calibration Matrix Calculation from Chessboard Images
 Code walkthrough and all the important steps are covered in [camera_calibration.md](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/blob/main/camera_calibration.md)
 
+## Undistorting Remapping Internal-Vetices-Drawn Images
+Calculate the undistorted, remapped images using the previously calculated Camera Matrix and Distortion Coefficients. The sample [output](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/tree/main/undistorted_chessboard_images) is produced from undistorted [script](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/blob/main/camera_image_distortion.py) .  
