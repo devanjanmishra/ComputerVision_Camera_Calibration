@@ -13,7 +13,7 @@ Code walkthrough and all the important steps are covered in [camera_calibration.
 ## Undistorting Remapping Internal-Vetices-Drawn Images
 Calculate the undistorted, remapped images using the previously calculated Camera Matrix and Distortion Coefficients. The sample [output](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/tree/main/undistorted_chessboard_images) is produced from undistorted [script](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/blob/main/camera_image_distortion.py) .  
 
-
+Here is the sample of input chessboard images, their corresponnding internal-vertices-drawn images and corresponding undistorted remapped images.  
 ![image](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/assets/50066136/b402ecad-83e8-42d6-9dd3-a57b3b957a58)
 ![image](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/assets/50066136/e4e723d2-3f6a-495c-ae9c-20065c16b7fb)
 ![image](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/assets/50066136/a1e84de8-cb58-438c-b9bc-b9feaa7c89d5)
@@ -22,6 +22,4 @@ Calculate the undistorted, remapped images using the previously calculated Camer
 ![image](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/assets/50066136/521250f5-1d7f-404e-9b94-1a7cd98485af)
 ![image](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/assets/50066136/c134e89d-6aff-4ac8-a502-0086e26bac62)
 ![image](https://github.com/devanjanmishra/ComputerVision_Camera_Calibration/assets/50066136/edf8916d-75b3-4765-a5f0-76cf3250057a)
-
-
 
